@@ -1,4 +1,3 @@
-Шаблон для 2-гої роботи з архітектури ПЗ
----
+# Polish Calculator
 
-Використайте кнопку **"Use this template"**, щоб створити власний репозиторій.
+Converter of postfix expression to Lisp-like expression.

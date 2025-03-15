@@ -1,5 +1,8 @@
 default: out/example
 
+run: default
+	./out/example
+
 clean:
 	rm -rf out
 

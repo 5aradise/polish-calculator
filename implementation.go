@@ -1,9 +1,9 @@
-package lab2
+package poca
 
 import "fmt"
 
 // TODO: document this function.
 // PrefixToPostfix converts
-func PrefixToPostfix(input string) (string, error) {
+func PostfixToLisp(input string) (string, error) {
 	return "TODO", fmt.Errorf("TODO")
 }
