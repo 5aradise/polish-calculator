@@ -1,12 +1,29 @@
 package poca
 
-// ComputeHandler should be constructed with input io.Reader and output io.Writer.
-// Its Compute() method should read the expression from input and write the computed result to the output.
+import (
+	"bufio"
+	"io"
+)
+
 type ComputeHandler struct {
-	// TODO: Add necessary fields.
+	Input  io.Reader
+	Output io.Writer
 }
 
 func (ch *ComputeHandler) Compute() error {
-	// TODO: Implement.
+	reader := bufio.NewReader(ch.Input)
+
+	str, _ := reader.ReadString('\n')
+
+	res, err := PostfixToLisp(str)
+	if err != nil {
+		return err
+	}
+
+	_, err = ch.Output.Write([]byte(res))
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
