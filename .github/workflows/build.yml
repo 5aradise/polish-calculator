@@ -25,5 +25,5 @@ jobs:
     - name: Build binary
       run: make build || make out/example
 
-    - name: List output files (optional)
+    - name: List output files
       run: ls -lah out/
